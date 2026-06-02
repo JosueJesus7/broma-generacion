@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mensaje Especial</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #000;
+      color: #00ff66;
+      font-family: "Courier New", monospace;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 20px;
+    }
+
+    .pantalla {
+      width: 100%;
+      max-width: 750px;
+      border: 2px solid #00ff66;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 0 25px #00ff66;
+      background: rgba(0, 0, 0, 0.85);
+      text-align: center;
+    }
+
+    h1 {
+      color: red;
+      font-size: 38px;
+      text-shadow: 0 0 10px red;
+      margin-bottom: 20px;
+    }
+
+    .linea {
+      text-align: left;
+      font-size: 17px;
+      margin: 10px 0;
+    }
+
+    .parpadeo {
+      animation: blink 0.8s infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    .barra {
+      width: 100%;
+      height: 25px;
+      border: 1px solid #00ff66;
+      margin-top: 25px;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .progreso {
+      height: 100%;
+      width: 0%;
+      background: #00ff66;
+      animation: cargar 6s forwards;
+    }
+
+    @keyframes cargar {
+      0% { width: 0%; }
+      25% { width: 35%; }
+      50% { width: 67%; }
+      75% { width: 89%; }
+      100% { width: 100%; }
+    }
+
+    .mensaje-final {
+      display: none;
+      color: white;
+      font-family: Arial, sans-serif;
+      animation: aparecer 1.5s ease-in-out;
+    }
+
+    @keyframes aparecer {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .mensaje-final h2 {
+      color: #00ffcc;
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .mensaje-final p {
+      font-size: 19px;
+      line-height: 1.6;
+    }
+
+    .firma {
+      margin-top: 25px;
+      color: #ffdd57;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .emoji {
+      font-size: 45px;
+      margin-bottom: 10px;
+    }
+
+    .boton {
+      margin-top: 25px;
+      padding: 12px 25px;
+      background: #00ffcc;
+      color: #000;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .boton:hover {
+      background: #ffdd57;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="pantalla" id="hackeo">
+    <h1>⚠ HAS SIDO HACKEADO ⚠</h1>
+
+    <div class="linea">> Accediendo al dispositivo...</div>
+    <div class="linea">> Revisando archivos importantes...</div>
+    <div class="linea">> Analizando recuerdos de la carrera...</div>
+    <div class="linea">> Detectando tareas entregadas a último momento...</div>
+    <div class="linea">> Encontrando desvelos, estrés y trabajos en equipo...</div>
+    <div class="linea parpadeo">> Preparando mensaje final...</div>
+
+    <div class="barra">
+      <div class="progreso"></div>
+    </div>
+  </div>
+
+  <div class="pantalla mensaje-final" id="final">
+    <div class="emoji">🎓✨</div>
+
+    <h2>JAJAJA, ES BROMA 😄</h2>
+
+    <p>
+      Tranquilo, no fuiste hackeado.<br>
+      Solo escaneaste un QR hecho para sacarte una sonrisa.
+    </p>
+
+    <p>
+      Pero ya hablando en serio... qué rápido se pasó todo.
+      Entre tareas, proyectos, exposiciones, desvelos, risas y momentos de estrés,
+      llegamos hasta aquí.
+    </p>
+
+    <p>
+      Estamos a nada de salir de la carrera, y aunque cada quien tomará su propio camino,
+      ojalá nunca olvidemos todo lo que vivimos juntos.
+    </p>
+
+    <p>
+      Gracias por formar parte de esta etapa.
+      Que lo que viene sea todavía mejor para todos.
+    </p>
+
+    <div class="firma">
+      Éxito siempre, futuro ingeniero/a 🚀
+    </div>
+
+    <button class="boton" onclick="location.reload()">Volver a escanear</button>
+  </div>
+
+  <script>
+    setTimeout(function() {
+      document.getElementById("hackeo").style.display = "none";
+      document.getElementById("final").style.display = "block";
+      document.body.style.background = "linear-gradient(135deg, #141e30, #243b55)";
+    }, 7000);
+  </script>
+
+</body>
