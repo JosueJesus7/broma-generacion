@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mensaje Especial</title>
+  <title>Mensaje para Profesores</title>
 
   <style>
     * {
@@ -15,15 +15,15 @@
       padding: 0;
       width: 100%;
       min-height: 100%;
-      overflow-x: hidden;
       overflow-y: auto;
+      overflow-x: hidden;
     }
 
     body {
       background: #000;
       color: #00ff66;
       font-family: "Courier New", monospace;
-      padding: 16px;
+      padding: 15px;
     }
 
     .pantalla {
@@ -92,7 +92,7 @@
 
     #final h2 {
       color: #00ffcc;
-      font-size: 26px;
+      font-size: 27px;
       margin-bottom: 15px;
     }
 
@@ -103,7 +103,7 @@
     }
 
     .emoji {
-      font-size: 40px;
+      font-size: 42px;
       margin-bottom: 10px;
     }
 
@@ -166,12 +166,12 @@
   <div class="pantalla" id="hackeo">
     <h1>⚠ HAS SIDO HACKEADO ⚠</h1>
 
-    <div class="linea">> Accediendo al dispositivo...</div>
-    <div class="linea">> Revisando archivos importantes...</div>
-    <div class="linea">> Analizando recuerdos de la carrera...</div>
-    <div class="linea">> Detectando tareas entregadas a último momento...</div>
-    <div class="linea">> Encontrando desvelos, estrés y trabajos en equipo...</div>
-    <div class="linea parpadeo">> Preparando mensaje final...</div>
+    <div class="linea">> Accediendo al sistema académico...</div>
+    <div class="linea">> Revisando tareas, exámenes y proyectos...</div>
+    <div class="linea">> Analizando paciencia durante todo el semestre...</div>
+    <div class="linea">> Detectando clases, consejos y enseñanzas...</div>
+    <div class="linea">> Encontrando evidencia de un gran profesor...</div>
+    <div class="linea parpadeo">> Preparando mensaje especial...</div>
 
     <div class="barra">
       <div class="progreso"></div>
@@ -179,30 +179,33 @@
   </div>
 
   <div class="pantalla" id="final">
-    <div class="emoji">🎓✨</div>
+    <div class="emoji">👨‍🏫✨📚</div>
 
     <h2>JAJAJA, ES BROMA 😄</h2>
 
     <p>
-      Tranquilo, no fuiste hackeado. Solo escaneaste un QR hecho para sacarte una sonrisa.
+      Tranquilo, profesor. No fue hackeado.
+      Solo escaneó un QR hecho para sacarle una sonrisa.
     </p>
 
     <p>
-      Pero ya hablando en serio... qué rápido se pasó todo. Entre tareas, proyectos,
-      exposiciones, desvelos, risas y momentos de estrés, llegamos hasta aquí.
+      Pero ya hablando en serio, queremos agradecerle por todo lo que nos enseñó,
+      por su paciencia, por sus consejos y por acompañarnos en esta etapa de nuestra formación.
     </p>
 
     <p>
-      Estamos a nada de salir de la carrera, y aunque cada quien tomará su propio camino,
-      ojalá nunca olvidemos todo lo que vivimos juntos.
+      Sabemos que no siempre fuimos el grupo más fácil, pero cada clase, cada proyecto
+      y cada corrección nos ayudó a crecer y a prepararnos mejor para lo que viene.
     </p>
 
     <p>
-      Gracias por formar parte de esta etapa. Que lo que viene sea todavía mejor para todos.
+      Estamos cerca de terminar la carrera, y parte de este logro también es gracias
+      a los profesores que dejaron algo positivo en nosotros.
     </p>
 
     <div class="firma">
-      Éxito siempre, generación ITIC 2022-2027 🚀
+      Gracias por ser parte de nuestra historia.  
+      Con aprecio, generación ITIC 2022-2027 🚀
     </div>
 
     <button class="boton" onclick="location.reload()">Volver a escanear</button>
@@ -212,7 +215,7 @@
     setTimeout(function() {
       document.getElementById("hackeo").style.display = "none";
       document.getElementById("final").style.display = "block";
-      document.body.style.background = "linear-gradient(135deg, #141e30, #243b55)";
+      document.body.style.background = "linear-gradient(135deg, #1d2b64, #f8cdda)";
       window.scrollTo(0, 0);
     }, 7000);
   </script>
