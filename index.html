@@ -10,48 +10,44 @@
       box-sizing: border-box;
     }
 
-    body {
+    html, body {
       margin: 0;
-      min-height: 100vh;
-      background: #000;
-      color: #00ff66;
-      font-family: "Courier New", monospace;
-      padding: 20px;
+      padding: 0;
+      width: 100%;
+      min-height: 100%;
+      overflow-x: hidden;
       overflow-y: auto;
     }
 
-    .contenedor {
-      width: 100%;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    body {
+      background: #000;
+      color: #00ff66;
+      font-family: "Courier New", monospace;
+      padding: 16px;
     }
 
     .pantalla {
       width: 100%;
-      max-width: 750px;
+      max-width: 720px;
+      margin: 20px auto;
       border: 2px solid #00ff66;
       border-radius: 15px;
-      padding: 25px;
-      box-shadow: 0 0 25px #00ff66;
-      background: rgba(0, 0, 0, 0.88);
+      padding: 22px;
+      box-shadow: 0 0 20px #00ff66;
+      background: rgba(0, 0, 0, 0.90);
       text-align: center;
-      margin: 20px 0;
     }
 
     h1 {
       color: red;
-      font-size: 34px;
+      font-size: 28px;
       text-shadow: 0 0 10px red;
-      margin-bottom: 20px;
     }
 
     .linea {
       text-align: left;
-      font-size: 16px;
+      font-size: 15px;
       margin: 10px 0;
-      word-wrap: break-word;
     }
 
     .parpadeo {
@@ -66,7 +62,7 @@
 
     .barra {
       width: 100%;
-      height: 25px;
+      height: 22px;
       border: 1px solid #00ff66;
       margin-top: 25px;
       border-radius: 20px;
@@ -88,107 +84,78 @@
       100% { width: 100%; }
     }
 
-    .mensaje-final {
+    #final {
       display: none;
       color: white;
       font-family: Arial, sans-serif;
-      animation: aparecer 1.5s ease-in-out;
     }
 
-    @keyframes aparecer {
-      from {
-        opacity: 0;
-        transform: scale(0.95);
-      }
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
-    .mensaje-final h2 {
+    #final h2 {
       color: #00ffcc;
-      font-size: 32px;
+      font-size: 26px;
       margin-bottom: 15px;
     }
 
-    .mensaje-final p {
-      font-size: 18px;
-      line-height: 1.6;
-      margin: 14px 0;
-    }
-
-    .firma {
-      margin-top: 25px;
-      color: #ffdd57;
-      font-size: 22px;
-      font-weight: bold;
+    #final p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 13px 0;
     }
 
     .emoji {
-      font-size: 45px;
+      font-size: 40px;
       margin-bottom: 10px;
+    }
+
+    .firma {
+      margin-top: 22px;
+      color: #ffdd57;
+      font-size: 19px;
+      font-weight: bold;
     }
 
     .boton {
       margin-top: 25px;
-      padding: 12px 25px;
+      width: 100%;
+      max-width: 280px;
+      padding: 12px;
       background: #00ffcc;
       color: #000;
       border: none;
       border-radius: 25px;
-      font-size: 16px;
+      font-size: 15px;
       font-weight: bold;
       cursor: pointer;
     }
 
-    .boton:hover {
-      background: #ffdd57;
-    }
-
-    @media (max-width: 600px) {
+    @media (max-width: 480px) {
       body {
-        padding: 12px;
-      }
-
-      .contenedor {
-        min-height: auto;
-        align-items: flex-start;
+        padding: 10px;
       }
 
       .pantalla {
-        padding: 18px;
-        margin: 15px 0;
+        margin: 12px auto;
+        padding: 16px;
       }
 
       h1 {
-        font-size: 25px;
+        font-size: 23px;
       }
 
       .linea {
-        font-size: 14px;
+        font-size: 13px;
       }
 
-      .mensaje-final h2 {
-        font-size: 25px;
+      #final h2 {
+        font-size: 23px;
       }
 
-      .mensaje-final p {
-        font-size: 16px;
-        line-height: 1.5;
+      #final p {
+        font-size: 15px;
       }
 
       .firma {
-        font-size: 18px;
-      }
-
-      .emoji {
-        font-size: 38px;
-      }
-
-      .boton {
-        width: 100%;
-        font-size: 15px;
+        font-size: 17px;
       }
     }
   </style>
@@ -196,54 +163,49 @@
 
 <body>
 
-  <div class="contenedor">
-    <div class="pantalla" id="hackeo">
-      <h1>⚠ HAS SIDO HACKEADO ⚠</h1>
+  <div class="pantalla" id="hackeo">
+    <h1>⚠ HAS SIDO HACKEADO ⚠</h1>
 
-      <div class="linea">> Accediendo al dispositivo...</div>
-      <div class="linea">> Revisando archivos importantes...</div>
-      <div class="linea">> Analizando recuerdos de la carrera...</div>
-      <div class="linea">> Detectando tareas entregadas a último momento...</div>
-      <div class="linea">> Encontrando desvelos, estrés y trabajos en equipo...</div>
-      <div class="linea parpadeo">> Preparando mensaje final...</div>
+    <div class="linea">> Accediendo al dispositivo...</div>
+    <div class="linea">> Revisando archivos importantes...</div>
+    <div class="linea">> Analizando recuerdos de la carrera...</div>
+    <div class="linea">> Detectando tareas entregadas a último momento...</div>
+    <div class="linea">> Encontrando desvelos, estrés y trabajos en equipo...</div>
+    <div class="linea parpadeo">> Preparando mensaje final...</div>
 
-      <div class="barra">
-        <div class="progreso"></div>
-      </div>
+    <div class="barra">
+      <div class="progreso"></div>
+    </div>
+  </div>
+
+  <div class="pantalla" id="final">
+    <div class="emoji">🎓✨</div>
+
+    <h2>JAJAJA, ES BROMA 😄</h2>
+
+    <p>
+      Tranquilo, no fuiste hackeado. Solo escaneaste un QR hecho para sacarte una sonrisa.
+    </p>
+
+    <p>
+      Pero ya hablando en serio... qué rápido se pasó todo. Entre tareas, proyectos,
+      exposiciones, desvelos, risas y momentos de estrés, llegamos hasta aquí.
+    </p>
+
+    <p>
+      Estamos a nada de salir de la carrera, y aunque cada quien tomará su propio camino,
+      ojalá nunca olvidemos todo lo que vivimos juntos.
+    </p>
+
+    <p>
+      Gracias por formar parte de esta etapa. Que lo que viene sea todavía mejor para todos.
+    </p>
+
+    <div class="firma">
+      Éxito siempre, generación ITIC 2022-2027 🚀
     </div>
 
-    <div class="pantalla mensaje-final" id="final">
-      <div class="emoji">🎓✨</div>
-
-      <h2>JAJAJA, ES BROMA 😄</h2>
-
-      <p>
-        Tranquilo, no fuiste hackeado.
-        Solo escaneaste un QR hecho para sacarte una sonrisa.
-      </p>
-
-      <p>
-        Pero ya hablando en serio... qué rápido se pasó todo.
-        Entre tareas, proyectos, exposiciones, desvelos, risas y momentos de estrés,
-        llegamos hasta aquí.
-      </p>
-
-      <p>
-        Estamos a nada de salir de la carrera, y aunque cada quien tomará su propio camino,
-        ojalá nunca olvidemos todo lo que vivimos juntos.
-      </p>
-
-      <p>
-        Gracias por formar parte de esta etapa.
-        Que lo que viene sea todavía mejor para todos.
-      </p>
-
-      <div class="firma">
-        Éxito siempre, generación ITIC 2022-2027 🚀
-      </div>
-
-      <button class="boton" onclick="location.reload()">Volver a escanear</button>
-    </div>
+    <button class="boton" onclick="location.reload()">Volver a escanear</button>
   </div>
 
   <script>
